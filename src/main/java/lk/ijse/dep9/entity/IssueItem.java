@@ -9,5 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class IssueItem implements SuperEntity{
+    private IssueItemPK issueItemPK;
 
+    public IssueItem(int issueId, String isbn) {
+        this.issueItemPK = new IssueItemPK(issueId, isbn);
+    }
 }
